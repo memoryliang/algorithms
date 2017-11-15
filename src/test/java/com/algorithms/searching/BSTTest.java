@@ -4,12 +4,8 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 public class BSTTest {
 
-
-  private BST<Integer, String> bst;
   @Before
   public void setUp() {
     bst = new BST<>();
@@ -19,9 +15,75 @@ public class BSTTest {
     bst.put(29, "d");
     bst.put(3, "e");
     bst.put(30, "f");
-    bst.put(6, "g");
-    bst.put(2, "h");
+    bst.put(11, "l");
+    bst.put(22,"k");
+//    bst.put(6, "g");
+//    bst.put(2, "h");
+//    bst.put(27,"i");
+//    bst.put(24,"j");
+//    bst.put(25,"k");
   }
+
+    @Test
+  public void postOrderTraversalByStack() throws Exception {
+    System.out.print("后序遍历（递归）: ");
+    bst.postOrderTraversal();
+    System.out.println();
+    System.out.print("后序遍历（栈  ）: ");
+    bst.postOrderTraversalByStack();
+      System.out.println();
+  }
+
+  @Test
+  public void inOrderTraversalByStack() throws Exception {
+    System.out.print("中序遍历（递归）: ");
+    bst.inOrderTraversal();
+    System.out.println();
+    System.out.print("中序遍历（栈  ）: ");
+    bst.inOrderTraversalByStack();
+  }
+
+  @Test
+  public void preOrderTraversalByStack() throws Exception {
+    System.out.print("前序遍历（递归）: ");
+    bst.preOrderTraversal();
+    System.out.println();
+    System.out.print("前序遍历（栈  ）: ");
+    bst.preOrderTraversalByStack();
+  }
+
+  @Test
+  public void layerTraver() throws Exception {
+    bst.layerTraver();
+  }
+
+  @Test
+  public void postOrderTraversal() throws Exception {
+    bst.postOrderTraversal();
+  }
+
+  @Test
+  public void inOrderTraversal() throws Exception {
+    bst.inOrderTraversal();
+  }
+
+  @Test
+  public void preOrderTraversal() throws Exception {
+    bst.preOrderTraversal();
+  }
+
+  @Test
+  public void getHeight() throws Exception {
+    System.out.println(bst.getHeight());
+  }
+
+  @Test
+  public void deleteMin() throws Exception {
+    bst.deleteMin();
+    bst.deleteMin();
+  }
+
+  private BST<Integer, String> bst;
 
   @Test
   public void min() throws Exception {
@@ -63,6 +125,11 @@ public class BSTTest {
 
   @Test
   public void keys() throws Exception {
+  }
+
+  @Test
+  public void select() throws Exception {
+    System.out.println(bst.select(5));
   }
 
 }

@@ -112,7 +112,10 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> implements Symbo
     }
     StringBuilder stringBuilder = new StringBuilder();
     for (int i = 0; i < size; i++) {
-      stringBuilder.append("[").append(keys[i]).append(",").append(values[i]).append("], ");
+      stringBuilder.append("[").append(keys[i]).append(",").append(values[i]).append("]");
+      if(i<size-1){
+        stringBuilder.append(", ");
+      }
     }
     return stringBuilder.toString();
   }

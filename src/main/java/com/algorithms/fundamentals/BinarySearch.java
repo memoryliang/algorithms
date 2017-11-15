@@ -16,8 +16,8 @@ public class BinarySearch {
   public int indexOf(int key) {
     int lo = 0;
     int hi = a.length - 1;
-//    return rank(key, lo, hi);
-    return rankByRecursive(key, lo, hi);
+    return rank(key, lo, hi);
+//    return rankByRecursive(key, lo, hi);
   }
 
   private int rank(int key, int lo, int hi) {
