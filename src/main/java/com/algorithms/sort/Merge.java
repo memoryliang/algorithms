@@ -51,6 +51,7 @@ public class Merge extends BaseSort {
     int mid = lo + (hi - lo) / 2;
     sort(a, lo, mid);
     sort(a, mid + 1, hi);
+    // if(intArr[mid]>intArr[mid+1]) 使用判断更费时
     merge(a, lo, mid, hi);
   }
 
